@@ -49,10 +49,10 @@ async(req,res,next) => {
           .from('Drive')
           .getPublicUrl(fileName);
   
-        res.json({
-          message: 'File uploaded successfully',
-          fileUrl: publicUrl
-        });
+        // res.json({
+        //   message: 'File uploaded successfully',
+        //   fileUrl: publicUrl
+        // });
 
         //Schema update
           const newFile = await fileModal.create({
@@ -61,7 +61,7 @@ async(req,res,next) => {
             user: req.user.userId
         })
     
-        res.json(newFile)
+        res.redirect('/home')
 
       } catch (error) {
         next(error);

@@ -7,6 +7,7 @@ const connectToDB = require('./config/db')
 connectToDB();
 const cookieParser = require('cookie-parser')
 const indexRouter = require('./routes/index.routes')
+const homeRouter = require('./routes/home.route')
 
 
 
@@ -18,6 +19,7 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+app.use('/index',homeRouter)
 app.use('/',indexRouter)
 app.use('/user',userRouter)
 

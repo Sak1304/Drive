@@ -34,7 +34,7 @@ router.post('/register',
         password:hashPassword,
     })
 
-    res.json(newUser)
+    res.redirect('/index/welcome')
 })
 
 router.get('/login',(req,res) => {
@@ -83,7 +83,7 @@ router.post('/login',
 
         res.cookie('token',token)
 
-        res.json('Logged in')
+        res.redirect('/home')
     }
 )
 module.exports = router;

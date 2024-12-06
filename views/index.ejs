@@ -1,11 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>Hello world</h1>
+
+<body class="bg-blue-300 dark:bg-gray-800 h-screen w-screen flex flex-col items-center justify-center">
+
+   <h1 class="mb-6 text-3xl font-bold ">WELCOME TO DRIVE</h1>
+
+<div class="inline-flex rounded-md shadow-sm" role="group">
+    <button onclick="window.location.href='/user/register'" type="button" class="px-4 py-2 text-2xl font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+      Register
+    </button>
+    <button onclick="window.location.href='/user/login'" type="button" class="px-4 py-2 text-2xl font-medium text-gray-900 bg-white border border-gray-200  rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+      Login
+    </button>
+   
+  </div>
+  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <button onclick="window.location.href='/user/register'">Register</button>
+<button onclick="window.location.href='/user/login'">Login</button> -->
