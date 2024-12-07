@@ -13,6 +13,7 @@ const homeRouter = require('./routes/home.route')
 
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine','ejs');
 app.use(cookieParser())
@@ -23,6 +24,6 @@ app.use('/index',homeRouter)
 app.use('/',indexRouter)
 app.use('/user',userRouter)
 
-app.listen(3000,() => {
-    console.log("Server is running")
+app.listen(PORT,() => {
+    console.log(`Server is running on port ${PORT}`)
 }) 
