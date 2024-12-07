@@ -24,6 +24,10 @@ app.use('/index',homeRouter)
 app.use('/',indexRouter)
 app.use('/user',userRouter)
 
+app.get('/', (req, res) => {
+    res.redirect('/home');
+});
+
 app.listen(PORT,() => {
     console.log(`Server is running on port ${PORT}`)
 }) 
